@@ -7,11 +7,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NavLink } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 export function Answers() {
+    
     const section = useRef(null)
     const sectiontop = useRef(null)
     const animatepulse = useRef(null)
     useGSAP(()=>{
-            
+            const mm = gsap.matchMedia();
+            mm.add("(min-width: 768px)", () => {
             gsap.to(sectiontop.current,{
                 scrollTrigger:{
                     trigger:section.current,
@@ -31,12 +33,12 @@ export function Answers() {
                 each:-1,
             }
         })
-  
+    })
     },[])
     return (
-        <section className=" bg-black  relative min-w-full min-h-screen overflow-hidden" ref={section}>
+        <section className=" bg-black  relative min-w-full min-h-screen" ref={section}>
             
-            <div className="px-8 lg:px-10 absolute inset-0  bg-black flex flex-col shadow-md shadow-gray-200/5 lg:flex-row justify-between gap-8  w-full h-fit z-10" ref={sectiontop}>
+            <div className="px-8 lg:px-10 lg:absolute inset-0  bg-black flex flex-col shadow-md shadow-gray-200/5 lg:flex-row justify-between gap-8  w-full h-fit z-10" ref={sectiontop}>
                 <div>
                 <div className="text-4xl md:text-6xl py-8 ">
                     <span className="text-5xl md:text-7xl ">A</span>nswers
@@ -60,7 +62,7 @@ export function Answers() {
                 </div>
 
             </div>
-            <div className="absolute max-h-full  flex items-center flex-col justify-center overflow-hidden pt-38  bg-dark-light -z-10 left-0  inset-0" >
+            <div className="lg:absolute min-h-screen  flex items-center flex-col justify-center overflow-hidden pt-38 pb-16 bg-dark-light -z-10 left-0  inset-0">
                 <div className="relative max-w-7xl mx-auto px-8 lg:px-0 text-center">
                     {/* Badge */}
                     <div

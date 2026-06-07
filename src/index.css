@@ -166,10 +166,10 @@ body {
   font-weight: 700;
 }
 .rotatenavtop{
-  rotate: 39deg;
-  transform: translateY(5px);
+transform: translateY(4px) rotate(30deg);
+will-change: transform;
 }
 .rotatenavbot{
-  rotate: -39deg;
-  transform: translateY(-5px);
+transform: translateY(-4px) rotate(-30deg);
+will-change: transform;
 }
