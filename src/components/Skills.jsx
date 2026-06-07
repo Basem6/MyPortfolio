@@ -14,10 +14,10 @@ export function Skills(){
     },[])
     return (
         <div ref={bar} className="mt-20">
-            <div className="text-white flex justify-center items-center flex-col max-w-7xl mx-auto px-90" >
+            <div className="text-white flex justify-center items-center flex-col max-w-7xl mx-auto px-0 md:px-40 lg:px-90 " >
                 <Marquee speed={60} direction="left"  gradient={false} loop={0} gradient={true} gradientColor={["#000000f4", 0, "#000000f4"]} gradientWidth={100}>
                 {array_brands.map((skill , index)=>{
-                return <div className={`fa-brands fa-${skill} text-gray-400 text-4xl lg:text-5xl px-14 `} key={index}></div>
+                return <div className={`fa-brands fa-${skill} text-gray-400 text-3xl px-8 md:text-5xl md:px-14 py-6 `} key={index}></div>
                 })}
                 </Marquee>
             </div>

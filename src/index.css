@@ -81,6 +81,7 @@ body {
   padding: 1.6px;
 }
 .btn:hover{
+  transition: all 500ms linear;
   box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.071) ;
 }
 .btn:hover::before{
@@ -163,4 +164,12 @@ body {
 .swiper-button-next::after {
   font-size: 10px;
   font-weight: 700;
+}
+.rotatenavtop{
+  rotate: 39deg;
+  transform: translateY(5px);
+}
+.rotatenavbot{
+  rotate: -39deg;
+  transform: translateY(-5px);
 }

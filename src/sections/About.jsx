@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function About() {
   const sectionRef = useRef(null)
   return (
-    <section id="about" className="py-8 lg:py-10 relative border-t-2  border-l-2 border-r-2 border-b-0 rounded-[50px] border-gray-400/10 max-w-full overflow-hidden" ref={sectionRef}>
+    <section id="about" className="py-8 lg:py-10 relative border-t-2  border-l-2 border-r-2 border-b-0 rounded-[50px] border-gray-400/10 max-w-full overflow-hidden " ref={sectionRef}>
     <div className="min-w-full px-8 lg:px-10 flex flex-col-reverse justify-center md:flex-row  md:justify-between   gap-4 ">
         <div className=''>
           <div>

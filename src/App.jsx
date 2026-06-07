@@ -16,6 +16,8 @@ function App() {
   const mouseforward = useRef(null);
   const cursorLabel = useRef(null);
   useGSAP(() => {
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 768px)", () => {
     smoother.current = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -34,18 +36,21 @@ function App() {
     });
     const time = gsap.timeline({defaults:{ease:"power1.inOut",duration:1.6}})
     settl(time)
-    return () => {
+      return () => {
+      smoother.current.kill();
       observer.kill();
-      smoother.current?.kill();
     };
-  }, []);
+  });
+  return () => mm.revert();
+},[]);
   // ─── Big photo hover → "about me" button cursor ───────────────────────────
   const enterBigPhoto = () => {
     if (!mouseforward.current) return;
     gsap.to(mouseforward.current, {
       paddingBottom:"20.5px",
       paddingTop:"20.5px",
-      filter:blur(10),
+      // FIX: was `filter:blur(10)` — not a string, caused a JS runtime error
+      filter:"blur(0px)",
       paddingRight:"33px",
       paddingLeft:"33px",
       duration: 0.22,
@@ -106,7 +111,7 @@ function App() {
       {/* ── Custom cursor ─────────────────────────────────────────────────── */}
       <div
         ref={mouseforward}
-        className="fixed w-4 h-4 bg-white rounded-full border-[1px] border-gray-200/80 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-100 flex items-center justify-center overflow-hidden min-w-fit"
+        className="hidden fixed w-4 h-4 bg-white rounded-full border-[1px] border-gray-200/80 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-100 lg:flex items-center justify-center overflow-hidden min-w-fit"
       >
         <span
           ref={cursorLabel}

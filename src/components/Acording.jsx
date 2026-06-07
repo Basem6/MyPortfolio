@@ -14,7 +14,7 @@
                 aria-controls={`${id}-panel1-content`}
                 id={`${id}-panel1-header`}
                 >
-                <Typography component="span" sx={{fontSize:"26px"}}>What services do you porvide</Typography>
+                <Typography component="span"  sx={{fontSize:"26px"}}>What services do you porvide</Typography>
                 </AccordionSummary>
                 <AccordionDetails sx={{color:"GrayText"}}>
                 I am provide the web development as a serviecs
@@ -26,9 +26,9 @@
                 aria-controls={`${id}-panel1-content`}
                 id={`${id}-panel1-header`}
                 >
-                <Typography component="span" sx={{fontSize:"26px"}}>What services do you porvide</Typography>
+                <Typography component="span"  sx={{fontSize: { xs: "18px", md: "26px" }}}>What services do you porvide</Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
+                <AccordionDetails   sx={{fontSize: { xs: "18px", md: "26px" }},{color:"GrayText"}}>
                 I am provide the web development as a serviecs
                 </AccordionDetails>
             </Accordion>
@@ -38,9 +38,9 @@
                 aria-controls={`${id}-panel1-content`}
                 id={`${id}-panel1-header`}
                 >
-                <Typography component="span" sx={{fontSize:"26px"}}>How do I start working with you</Typography>
+                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>How do I start working with you</Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
+                <AccordionDetails sx={{fontSize: { xs: "18px", md: "26px" }},{color:"GrayText"}}>
                 It starts with a free discovery call. We’ll discuss your goals, vision, and how I can bring your ideas to life.
                 </AccordionDetails>
             </Accordion>
@@ -50,9 +50,9 @@
                 aria-controls={`${id}-panel1-content`}
                 id={`${id}-panel1-header`}
                 >
-                <Typography component="span" sx={{fontSize:"26px"}}>How long does a project take?</Typography>
+                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>How long does a project take?</Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
+                <AccordionDetails sx={{fontSize: { xs: "18px", md: "26px" }},{color:"GrayText"}}>
                 Project timelines vary based on scope, but most designs take 2–4 weeks. I’ll provide a clear timeline after our initial consultation.
                 </AccordionDetails>
             </Accordion>
@@ -62,9 +62,9 @@
                 aria-controls={`${id}-panel1-content`}
                 id={`${id}-panel1-header`}
                 >
-                <Typography component="span" sx={{fontSize:"26px"}}>Do you provide revisions?</Typography>
+                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>Do you provide revisions?</Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
+                <AccordionDetails sx={{fontSize: { xs: "18px", md: "26px" }},{color:"GrayText"}}>
                 Absolutely! I offer a set number of revisions to ensure the design perfectly aligns with your vision.
                 </AccordionDetails>
             </Accordion>
@@ -74,9 +74,9 @@
                 aria-controls={`${id}-panel1-content`}
                 id={`${id}-panel1-header`}
                 >
-                <Typography component="span" sx={{fontSize:"26px"}}>What industries do you work with?</Typography>
+                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>What industries do you work with?</Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
+                <AccordionDetails sx={{fontSize: { xs: "18px", md: "26px" }},{color:"GrayText"}}>
                 From tech startups to creative agencies, I collaborate with a range of industries — adapting designs to fit each brand’s unique identity.
                 </AccordionDetails>
             </Accordion>
@@ -86,9 +86,9 @@
                 aria-controls={`${id}-panel1-content`}
                 id={`${id}-panel1-header`}
                 >
-                <Typography component="span" sx={{fontSize:"26px"}}>What is your pricing structure?</Typography>
+                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>What is your pricing structure?</Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
+                <AccordionDetails sx={{fontSize: { xs: "18px", md: "26px" }},{color:"GrayText"}}>
                 Pricing depends on the project’s complexity and scope. Let’s discuss your goals, and I’ll provide a transparent quote tailored to your needs.
                 </AccordionDetails>
             </Accordion>
@@ -98,9 +98,9 @@
                 aria-controls={`${id}-panel1-content`}
                 id={`${id}-panel1-header`}
                 >
-                <Typography component="span" sx={{fontSize:"26px"}}>Can you redesign my existing website?</Typography>
+                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>Can you redesign my existing website?</Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
+                <AccordionDetails sx={{fontSize: { xs: "18px", md: "26px" }},{color:"GrayText"}}>
                 Definitely! I can transform your outdated site into a modern, user-friendly experience that reflects your brand’s evolution.
                 </AccordionDetails>
             </Accordion>

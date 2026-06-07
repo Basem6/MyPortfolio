@@ -10,36 +10,37 @@ export function Answers() {
     const sectiontop = useRef(null)
     const animatepulse = useRef(null)
     useGSAP(()=>{
-        gsap.to(sectiontop.current,{
-            scrollTrigger:{
-                trigger:section.current,
-                start:"top top",
-                pin:section.current,
-                scrub:true
-            },
-            yPercent:-100,
-        
+            
+            gsap.to(sectiontop.current,{
+                scrollTrigger:{
+                    trigger:section.current,
+                    start:"top top",
+                    pin:section.current,
+                    scrub:true
+                },
+                yPercent:-100,
+            
+            })
+            gsap.to(animatepulse.current,{
+            opacity:0.4,
+            repeat:-1,
+            boxShadow: "0_0_20px_rgba(0,255,200,0.1)",
+            duration:2.3,
+            stagger:{
+                each:-1,
+            }
         })
-        gsap.to(animatepulse.current,{
-        opacity:0.4,
-        repeat:-1,
-        boxShadow: "0_0_20px_rgba(0,255,200,0.1)",
-        duration:2.3,
-        stagger:{
-            each:-1,
-        }
-    })
+  
     },[])
     return (
         <section className=" bg-black  relative min-w-full min-h-screen overflow-hidden" ref={section}>
             
             <div className="px-8 lg:px-10 absolute inset-0  bg-black flex flex-col shadow-md shadow-gray-200/5 lg:flex-row justify-between gap-8  w-full h-fit z-10" ref={sectiontop}>
                 <div>
-                <div className="text-6xl py-8">
-                    <span className="text-7xl">A</span>nswers
+                <div className="text-4xl md:text-6xl py-8 ">
+                    <span className="text-5xl md:text-7xl ">A</span>nswers
                 </div>
-
-                <p className="text-gray-500/90 text-2xl py-5">
+                <p className="text-gray-500/90 text-md md:text-2xl py-5">
                     Find answers to common questions about my design process,
                     services etc…
                 </p>
@@ -58,7 +59,7 @@ export function Answers() {
                 </div>
 
             </div>
-            <div className="absolute min-h-screen  flex items-center flex-col justify-center overflow-hidden pt-38 pb-16 bg-dark-light -z-10 left-0  inset-0">
+            <div className="absolute min-h-screen  flex items-center flex-col justify-center overflow-hidden pt-38 pb-16 bg-dark-light -z-10 left-0  inset-0" id="contact">
                 <div className="relative max-w-7xl mx-auto px-8 lg:px-0 text-center">
                     {/* Badge */}
                     <div
@@ -71,7 +72,8 @@ export function Answers() {
 
                     {/* Heading */}
                     <h1
-                    className="text-4xl sm:text-5xl  md:text-3xl lg:text-[37px]    leading-[1.1] tracking-tight"
+                    style={{fontFamily: "'Playfair Display', serif",}}
+                    className="text-3xl md:text-5xl    leading-[1.1] tracking-tight"
                     >
                     Curious about what we can create together? Let’s 
                     <span className="text-white">

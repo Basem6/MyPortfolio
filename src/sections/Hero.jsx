@@ -1,12 +1,20 @@
 import {  useRef } from 'react'
-import { NavLink } from 'react-router-dom'
 //gsap
+import { ScrollSmoother } from 'gsap/ScrollSmoother'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger,SplitText);
 export default function Hero({tl}) {
+const scrollToProjects = (e) => {
+  e.preventDefault()
+  if(ScrollSmoother.get()){
+    ScrollSmoother.get().scrollTo('#projects', true , "bottom bottom")
+  }else{
+    document.getElementById("project".replace('#', ''))?.scrollIntoView({ behavior: 'smooth', })
+  }
+}
   const sectionRef = useRef(null)
   const badgeRef = useRef(null)
   const headingRef = useRef(null)
@@ -72,11 +80,10 @@ export default function Hero({tl}) {
       mask:"lines"
     })
     gsap.to(scrolldot.current,{
-      y:7,
+      y:16,
       repeat:-1,
       yoyo:true,
-      duration:0.7
-      
+      duration:1.2
     })
     gsap.to(animatepulse.current,{
       opacity:0.4,
@@ -123,7 +130,7 @@ export default function Hero({tl}) {
     <section
       ref={sectionRef}
       id="home"
-      className="relative min-h-screen z-10  flex items-center flex-col justify-center overflow-hidden pt-38 pb-16 bg-transparent"
+      className="relative min-h-screen z-10  flex items-center flex-col justify-center overflow-hidden pt-24 md:pt-38 pb-16 bg-transparent"
     >
       <div className="relative max-w-7xl mx-auto z-10 px-8 lg:px-0 text-center pt-4">
         {/* Badge */}
@@ -142,7 +149,7 @@ export default function Hero({tl}) {
           className="text-4xl sm:text-5xl  md:text-6xl lg:text-[90px] font-thin   leading-[1.1] tracking-tight"
         >
           Basem Mahmoud
-          <span className="text-white">
+          <span className="text-white whitespace-nowrap">
             <br />
             Frontend Developer
           </span>
@@ -160,18 +167,18 @@ export default function Hero({tl}) {
 
         {/* CTA Buttons */}
         <div ref={ctaRef} className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <NavLink
-            to="/#projects"
+          <a
+            onClick={scrollToProjects}
             className="group px-6 py-2 bg-black  text-white     transition-all duration-300 btn"
           >
             See Projects
-          </NavLink>
-          <NavLink
-            to="/#contact"
+          </a>
+          <a
+            href="/src/assets/pdf/my_cv.pdf"
             className="px-6 py-2 btn   text-white   transition-all duration-300 "
           >
-            Download Resume
-          </NavLink>
+            View Resume
+          </a>
         </div>
 
       <div className="hidden lg:flex gap-75 justify-center items-center absolute left-1/2 transform -translate-x-1/2  mt-9" ref={down}>
@@ -182,7 +189,7 @@ export default function Hero({tl}) {
                 
               >
                 <div className="relative w-7 h-11 mouse border-2 border-white/20 rounded-full flex justify-center pt-2.5">
-                  <div className=" w-1.5 h-1.5 bg-white rounded-full" ref={scrolldot}/>
+                  <div className=" w-1.5 h-1.5 bg-white rounded-full relative bottom-1.5" ref={scrolldot}/>
                 </div>
               </div>
               <div className='whitespace-nowrap  text-gray-300/70 text-sm' ref={right}>to see projects</div>

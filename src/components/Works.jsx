@@ -1,8 +1,8 @@
 import Sweiper from "./Swiper";
 export function Works(){
 return(
-    <section id="projects" className="min-w-full px-8 lg:px-10 relative    max-w-full overflow-hidden">
-        <div className="min-w-full px-8 lg:px-10 flex gap-1.5 items-center text-3xl py-10 ">
+    <section id="projects" className="min-w-full px-8 lg:px-10 relative   max-w-full overflow-hidden">
+        <div className="min-w-full px-8 lg:px-10 flex gap-1.5 items-center text-3xl py-15 ">
         <h1 >Recent Works</h1>
         <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-8">
