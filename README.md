@@ -9,7 +9,7 @@ This project showcases my skills, projects, and experience as a web developer.
 ---
 
 ## 🌐 Live Demo
-👉 [View Portfolio](https://my-portfolio-gz7q8w2qw-basem6s-projects.vercel.app/)
+👉 [View Portfolio](https://my-portfolio-e6yv711l0-basem6s-projects.vercel.app/)
 
 ---
 
