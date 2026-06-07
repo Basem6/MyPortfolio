@@ -36,7 +36,7 @@ const scrollToProjects = (e) => {
           x: gsap.utils.random(0,300),
           y: gsap.utils.random(-23, 12),
           rotate:gsap.utils.random(-10, 10),
-          duration: gsap.utils.random(10, 15),
+          duration: gsap.utils.random(6, 10),
           repeat: -1,
           opacity:0.7,
           yoyo:true,

@@ -16,6 +16,9 @@ function App() {
   const mouseforward = useRef(null);
   const cursorLabel = useRef(null);
   useGSAP(() => {
+    const servicesCards = gsap.utils.toArray("#serviece-c .card-s")
+    const toSkew = gsap.quickTo(servicesCards, "skewY");
+    const clamp = gsap.utils.clamp(-20, 20);
     const time = gsap.timeline({defaults:{ease:"power1.inOut",duration:1.6}})
     settl(time)
     const mm = gsap.matchMedia();
@@ -25,6 +28,8 @@ function App() {
       content: "#smooth-content",
       smooth: 2,
       effects: true,
+      onUpdate: (self) => toSkew(clamp(self.getVelocity() / -40)),
+        onStop: () => toSkew(0),
     });
     const xTo = gsap.quickTo(mouseforward.current, "x", { duration: 0.3 });
     const yTo = gsap.quickTo(mouseforward.current, "y", { duration: 0.3 });
