@@ -16,6 +16,8 @@ function App() {
   const mouseforward = useRef(null);
   const cursorLabel = useRef(null);
   useGSAP(() => {
+    const time = gsap.timeline({defaults:{ease:"power1.inOut",duration:1.6}})
+    settl(time)
     const mm = gsap.matchMedia();
     mm.add("(min-width: 768px)", () => {
     smoother.current = ScrollSmoother.create({
@@ -34,8 +36,6 @@ function App() {
         yTo(self.y);
       },
     });
-    const time = gsap.timeline({defaults:{ease:"power1.inOut",duration:1.6}})
-    settl(time)
       return () => {
       smoother.current.kill();
       observer.kill();

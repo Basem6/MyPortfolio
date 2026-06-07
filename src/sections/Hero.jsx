@@ -12,7 +12,7 @@ const scrollToProjects = (e) => {
   if(ScrollSmoother.get()){
     ScrollSmoother.get().scrollTo('#projects', true , "bottom bottom")
   }else{
-    document.getElementById("project".replace('#', ''))?.scrollIntoView({ behavior: 'smooth', })
+    document.getElementById("projects".replace('#', ''))?.scrollIntoView({ behavior: 'smooth', })
   }
 }
   const sectionRef = useRef(null)
@@ -130,7 +130,7 @@ const scrollToProjects = (e) => {
     <section
       ref={sectionRef}
       id="home"
-      className="relative min-h-screen z-10  flex items-center flex-col justify-center overflow-hidden pt-24 md:pt-38 pb-16 bg-transparent"
+      className="relative min-h-screen z-10  flex items-center flex-col justify-center overflow-hidden pt-24 md:pt-34 pb-16 bg-transparent"
     >
       <div className="relative max-w-7xl mx-auto z-10 px-8 lg:px-0 text-center pt-4">
         {/* Badge */}
