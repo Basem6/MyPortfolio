@@ -62,7 +62,7 @@ export function Answers() {
                 </div>
 
             </div>
-            <div className="lg:absolute min-h-screen  flex items-center flex-col justify-center overflow-hidden pt-38 pb-16 bg-dark-light -z-10 left-0  inset-0">
+            <div className="lg:absolute min-h-screen  flex items-center flex-col justify-center overflow-hidden pt-38 pb-16 bg-dark-light -z-10 left-0  inset-0" id="contact">
                 <div className="relative max-w-7xl mx-auto px-8 lg:px-0 text-center">
                     {/* Badge */}
                     <div
