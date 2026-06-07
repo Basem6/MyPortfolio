@@ -4,6 +4,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import{ScrollSmoother} from "gsap/ScrollSmoother"
+import man from "/src/assets/manphot.jpg"
+import girl from "/src/assets/girlphot.jpg"
+import ropot from "/src/assets/ropot.jpg"
 gsap.registerPlugin(ScrollTrigger);
 export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
     const grid  = useRef(null)
@@ -61,7 +64,7 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
                     >
                 <img
                 loading="lazy"
-                src="/src/assets/girlphot.jpg"
+                src={girl}
                 className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
                 <div className="flex gap-2 absolute bg-gray-400/30  border-gray-50/20 border-[1px] justify-center items-center bottom-2 left-1/2 text-sm  -translate-x-1/2 min-w-[95%] rounded-full">
@@ -77,7 +80,7 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
                 href="#about">
                     <img
                     loading="lazy"
-                    src="/src/assets/manphot.jpg"
+                    src={man}
                     onMouseEnter={enterBigPhoto}   
                     onMouseLeave={leave} 
                     className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
@@ -93,7 +96,7 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
                     rel="noopener noreferrer"
                     >
                 <img
-                src="/src/assets/ropot.jpg"
+                src={ropot}
                 loading="lazy"
                 className="w-full h-full card object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 /> 
@@ -107,7 +110,7 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
             <div className="overflow-hidden card rounded-sm col-span-1 row-span-2 relative">
                 <img
                 loading="lazy"
-                src="/src/assets/ropot.jpg"
+                src={ropot}
                 className="w-full h-full card object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
                 <div className="flex gap-2 absolute bg-gray-400/30 border-gray-50/20 border-[1px]  justify-center items-center bottom-2 left-1/2 text-sm  -translate-x-1/2 min-w-[95%] rounded-full">
@@ -119,7 +122,7 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
             <div className="overflow-hidden card rounded-sm col-span-1 row-span-2 relative">
                 <img
                 loading="lazy"
-                src="/src/assets/girlphot.jpg"
+                src={girl}
                 className="w-full h-full object-cover card grayscale card hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
                 <div className="flex gap-2 card absolute bg-gray-400/30  border-gray-50/20 border-[1px] justify-center items-center bottom-2 left-1/2 text-sm  -translate-x-1/2 min-w-[95%] rounded-full">

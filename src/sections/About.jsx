@@ -1,3 +1,4 @@
+import basem from "/src/assets/beso.jpeg"
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -41,7 +42,7 @@ export default function About() {
         </div>
         <div className="w-full  md:w-300 md:h-150 overflow-hidden rounded-lg ">
           <img
-            src="/src/assets/beso.jpeg"
+            src={basem}
             className="grayscale hover:grayscale-0 hover:scale-105 transition duration-700 object-cover min-w-full min-h-full max-w-full max-h-full ease-in-out"
           />
         </div>

@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import AccordionUsage from "../components/Acording";
 import gsap from "gsap";
+import ropot from "/src/assets/ropot.jpg"
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NavLink } from "react-router-dom";
@@ -47,7 +48,7 @@ export function Answers() {
 
                 <div className="w-full md:w-125 md:w-125">
                     <img
-                    src="/src/assets/ropot.jpg"
+                    src={ropot}
                     alt=""
                     className="w-full h-full object-cover grayscale rounded"
                     />

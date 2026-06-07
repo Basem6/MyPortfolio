@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+import girl from "/src/assets/girlphot.jpg"
+import ropot from "/src/assets/ropot.jpg"
     // import required modules
     import { Pagination, Navigation } from 'swiper/modules';
     import Button from './Arrow';
@@ -31,7 +32,7 @@ import { Link } from 'react-router-dom';
                 <Link to={"https://e-commerce-uo5k83pi1-basem6s-projects.vercel.app/"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src="/src/assets/girlphot.jpg"
+                    src={girl}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -47,7 +48,7 @@ import { Link } from 'react-router-dom';
                 <Link to={"https://todo-app32.vercel.app/"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src="/src/assets/ropot.jpg"
+                    src={ropot}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -62,7 +63,7 @@ import { Link } from 'react-router-dom';
                 <Link to={""}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src="/src/assets/girlphot.jpg"
+                    src={girl}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -76,7 +77,7 @@ import { Link } from 'react-router-dom';
             <SwiperSlide> 
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src="/src/assets/girlphot.jpg"
+                    src={girl}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -89,7 +90,7 @@ import { Link } from 'react-router-dom';
             <SwiperSlide> 
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src="/src/assets/girlphot.jpg"
+                    src={ropot}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
