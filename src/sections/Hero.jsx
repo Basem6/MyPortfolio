@@ -41,7 +41,7 @@ const scrollToProjects = (e) => {
           opacity:0.7,
           yoyo:true,
           ease: "sine.inOut",
-        onComplete: animate,
+        
         
       });
     };
@@ -55,7 +55,7 @@ const scrollToProjects = (e) => {
           opacity:0.8,
           yoyo:true,
           ease: "sine.inOut",
-        onComplete: animate3,
+        
         
       });
     };
@@ -68,13 +68,11 @@ const scrollToProjects = (e) => {
           repeat: -1,
           yoyo:true,
           ease: "sine.inOut",
-        onComplete: animate2,
-        
       });
     };
     animate()
-      animate2()
-      animate3()
+    animate2()
+    animate3()
     const textpara=SplitText.create(descRef.current,{
       type:"lines",
       mask:"lines"
@@ -197,52 +195,8 @@ const scrollToProjects = (e) => {
       </div>
       <div className="absolute inset-0 -z-10 flex flex-col  justify-center items-start overflow-hidden min-h-full min-w-full" ref={overlay}>
         <div className='flex'>
-        <svg
-        ref={blob}
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="1440"
-        height="360"
-        viewBox="0 0 1440 360"
-        preserveAspectRatio="none"
-        className="relative top-8 blur-md scale-[2]"
-      >
-        <g mask="url(#mask1)" fill="none">
-          <rect
-            width="1440"
-            height="360"
-            fill="url(#gradient1)"
-          />
-
-          <path
-            d="M0,116 C96,150.8 288,285.4 480,290 C672,294.6 768,149 960,139 C1152,129 1344,219.8 1440,240L1440 360L0 360Z"
-            fill="rgb(41 43 46)"
-          />
-        </g>
-
-        <defs>
-          <mask id="mask1">
-            <rect width="1440" height="360" fill="#fff" />
-          </mask>
-
-          <linearGradient
-            id="gradient1"
-            x1="81.25%"
-            y1="175%"
-            x2="18.75%"
-            y2="-75%"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.16" stopColor="#000" />
-            <stop offset="0.35" stopColor="#000" />
-            <stop offset="0.61" stopColor="#000" />
-            <stop offset="0.88" stopColor="#000" />
-            <stop offset="1" stopColor="#000" />
-          </linearGradient>
-        </defs>
-        </svg>
-        <svg
-          ref={blob3}
+          <svg
+          ref={blob}
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           width="1440"
@@ -251,11 +205,11 @@ const scrollToProjects = (e) => {
           preserveAspectRatio="none"
           className="relative top-8 blur-md scale-[2]"
         >
-          <g mask="url(#mask2)" fill="none">
+          <g mask="url(#mask1)" fill="none">
             <rect
               width="1440"
               height="360"
-              fill="url(#gradient2)"
+              fill="url(#gradient1)"
             />
 
             <path
@@ -265,12 +219,12 @@ const scrollToProjects = (e) => {
           </g>
 
           <defs>
-            <mask id="mask2">
+            <mask id="mask1">
               <rect width="1440" height="360" fill="#fff" />
             </mask>
 
             <linearGradient
-              id="gradient2"
+              id="gradient1"
               x1="81.25%"
               y1="175%"
               x2="18.75%"
@@ -284,53 +238,97 @@ const scrollToProjects = (e) => {
               <stop offset="1" stopColor="#000" />
             </linearGradient>
           </defs>
-        </svg>
+          </svg>
+          <svg
+            ref={blob3}
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            width="1440"
+            height="360"
+            viewBox="0 0 1440 360"
+            preserveAspectRatio="none"
+            className="relative top-8 blur-md scale-[2]"
+          >
+            <g mask="url(#mask2)" fill="none">
+              <rect
+                width="1440"
+                height="360"
+                fill="url(#gradient2)"
+              />
+
+              <path
+                d="M0,116 C96,150.8 288,285.4 480,290 C672,294.6 768,149 960,139 C1152,129 1344,219.8 1440,240L1440 360L0 360Z"
+                fill="rgb(41 43 46)"
+              />
+            </g>
+
+            <defs>
+              <mask id="mask2">
+                <rect width="1440" height="360" fill="#fff" />
+              </mask>
+
+              <linearGradient
+                id="gradient2"
+                x1="81.25%"
+                y1="175%"
+                x2="18.75%"
+                y2="-75%"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0.16" stopColor="#000" />
+                <stop offset="0.35" stopColor="#000" />
+                <stop offset="0.61" stopColor="#000" />
+                <stop offset="0.88" stopColor="#000" />
+                <stop offset="1" stopColor="#000" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
         <svg
-      ref={blob2}
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="1440"
-      height="160"
-      viewBox="0 0 1440 160"
-      preserveAspectRatio="none"
-      className="blur-xl scale-[2]"
-    >
-      <g mask="url(#mask3)" fill="none">
-        <rect
+          ref={blob2}
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
           width="1440"
           height="160"
-          fill="url(#gradient3)"
-        />
-
-        <path
-          d="M0,113 C48,99 144,48.8 240,43 C336,37.2 384,86.2 480,84 C576,81.8 624,31.8 720,32 C816,32.2 864,86.6 960,85 C1056,83.4 1104,13 1200,24 C1296,35 1392,116.8 1440,140L1440 160L0 160Z"
-          fill="rgb(28 29 29)"
-        />
-      </g>
-
-      <defs>
-        <mask id="mask3">
-          <rect width="1440" height="160" fill="#fff" />
-        </mask>
-
-        <linearGradient
-          id="gradient3"
-          x1="77.78%"
-          y1="-200%"
-          x2="22.22%"
-          y2="300%"
-          gradientUnits="userSpaceOnUse"
+          viewBox="0 0 1440 160"
+          preserveAspectRatio="none"
+          className="blur-xl scale-[2]"
         >
-          <stop offset="0.16" stopColor="#000" />
-          <stop offset="0.25" stopColor="#000" />
-          <stop offset="0.35" stopColor="#000" />
-          <stop offset="0.61" stopColor="#000" />
-          <stop offset="0.88" stopColor="#000" />
-          <stop offset="1" stopColor="#000" />
-        </linearGradient>
-      </defs>
-    </svg>
+          <g mask="url(#mask3)" fill="none">
+            <rect
+              width="1440"
+              height="160"
+              fill="url(#gradient3)"
+            />
+
+            <path
+              d="M0,113 C48,99 144,48.8 240,43 C336,37.2 384,86.2 480,84 C576,81.8 624,31.8 720,32 C816,32.2 864,86.6 960,85 C1056,83.4 1104,13 1200,24 C1296,35 1392,116.8 1440,140L1440 160L0 160Z"
+              fill="rgb(28 29 29)"
+            />
+          </g>
+
+          <defs>
+            <mask id="mask3">
+              <rect width="1440" height="160" fill="#fff" />
+            </mask>
+
+            <linearGradient
+              id="gradient3"
+              x1="77.78%"
+              y1="-200%"
+              x2="22.22%"
+              y2="300%"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.16" stopColor="#000" />
+              <stop offset="0.25" stopColor="#000" />
+              <stop offset="0.35" stopColor="#000" />
+              <stop offset="0.61" stopColor="#000" />
+              <stop offset="0.88" stopColor="#000" />
+              <stop offset="1" stopColor="#000" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </section>
     </>
