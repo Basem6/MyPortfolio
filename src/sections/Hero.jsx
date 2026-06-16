@@ -140,7 +140,6 @@ const scrollToProjects = (e) => {
           <span className="w-2 h-2 bg-white  rounded-full shadow-[0_0_10px_rgba(0,255,255,0.92)] shadow-accent" ref={animatepulse}/>
           Crafting Unique Brand Identities
         </div>
-
         {/* Heading */}
         <h1
           ref={headingRef}
