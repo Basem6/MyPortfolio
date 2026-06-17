@@ -132,7 +132,7 @@ function App() {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <div className="min-h-screen flex flex-col bg-dark text-text-primary">
-            <main className="flex-1">
+            <main className="">
               <Routes>
                 <Route
                   path="/"

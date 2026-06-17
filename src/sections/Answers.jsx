@@ -5,9 +5,9 @@ import ropot from "/src/assets/ropot.jpg"
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NavLink } from "react-router-dom";
+import NoiseShader from "../components/NoiseShader";
 gsap.registerPlugin(ScrollTrigger);
 export function Answers() {
-    
     const section = useRef(null)
     const sectiontop = useRef(null)
     const animatepulse = useRef(null)
@@ -21,7 +21,7 @@ export function Answers() {
                     pin:section.current,
                     scrub:true
                 },
-                yPercent:-100,
+                yPercent:-110,
             
             })
             gsap.to(animatepulse.current,{
@@ -36,8 +36,7 @@ export function Answers() {
     })
     },[])
     return (
-        <section className=" bg-black  relative min-w-full min-h-screen" ref={section}>
-            
+        <section className="relative min-w-full min-h-screen" ref={section}> 
             <div className="px-8 lg:px-10 lg:absolute inset-0  bg-black flex flex-col shadow-md shadow-gray-200/5 lg:flex-row justify-between gap-8  w-full h-fit z-10" ref={sectiontop}>
                 <div>
                 <div className="text-4xl md:text-6xl py-8 ">
@@ -62,7 +61,7 @@ export function Answers() {
                 </div>
 
             </div>
-            <div className="lg:absolute min-h-screen  flex items-center flex-col justify-center overflow-hidden pt-38 pb-16 bg-dark-light -z-10 left-0  inset-0" id="contact">
+            <div className="lg:absolute min-h-screen  flex items-center flex-col justify-center  pt-38   -z-10 left-0 inset-0" id="contact">
                 <div className="relative max-w-7xl mx-auto px-8 lg:px-0 text-center">
                     {/* Badge */}
                     <div
@@ -115,6 +114,9 @@ export function Answers() {
                         </NavLink>
                     </div>
 
+                </div>
+                <div className="absolute inset-0 left-0 top-0 -z-50 min-w-full min-h-full ">
+                <NoiseShader className={"max-w-full min-h-full"}/>
                 </div>
             </div>
         </section>
