@@ -1,11 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import AccordionUsage from "../components/Acording";
 import gsap from "gsap";
-import ropot from "/src/assets/ropot.jpg"
+import ropot from "/src/assets/ropot.webp"
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NavLink } from "react-router-dom";
-import NoiseShader from "../components/NoiseShader";
 gsap.registerPlugin(ScrollTrigger);
 export function Answers() {
     const section = useRef(null)
@@ -49,8 +48,8 @@ export function Answers() {
 
                 <div className="w-full md:w-125 md:w-125">
                     <img
+                    alt="Robot illustration for the answers section"
                     src={ropot}
-                    alt=""
                     className="w-full h-full object-cover grayscale rounded"
                     />
                 </div>
@@ -114,9 +113,6 @@ export function Answers() {
                         </NavLink>
                     </div>
 
-                </div>
-                <div className="absolute inset-0 left-0 top-0 -z-50 min-w-full min-h-full ">
-                <NoiseShader className={"max-w-full min-h-full"}/>
                 </div>
             </div>
         </section>

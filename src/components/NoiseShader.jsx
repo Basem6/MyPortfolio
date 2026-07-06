@@ -16,7 +16,7 @@ precision highp float;
 uniform vec2 iResolution;
 uniform float iTime;
 
-const int noiseSwirlSteps = 2;
+const int noiseSwirlSteps = 1;
 const float noiseSwirlValue = 1.0;
 const float noiseSwirlStepValue = noiseSwirlValue / float(noiseSwirlSteps);
 
@@ -141,7 +141,7 @@ float getNoise(vec3 v) {
         ) * noiseSwirlStepValue;
     }
 
-    return fbm5(v) * 0.5 + 0.5;
+    return fbm3(v) * .5 + .5;
 }
 
 void main() {
@@ -193,40 +193,58 @@ export default function NoiseShader() {
       const h = window.innerHeight;
 
       renderer.setSize(w, h);
+      renderer.dpr = Math.min(window.devicePixelRatio,1.2);
 
       if (w > 0 && h > 0) {
         program.uniforms.iResolution.value.set(w, h);
       }
     };
 
-    window.addEventListener("resize", resize);
-    resize();
+      window.addEventListener("resize", resize);
+      resize();
 
-    let raf;
+      let raf;
 
-    const update = (t) => {
-      raf = requestAnimationFrame(update);
+      const update = (t) => {
+        if (!program || !program.uniforms) return;
 
-      if (!program || !program.uniforms) return;
+        program.uniforms.iTime.value = t * 0.001;
 
-      program.uniforms.iTime.value = t * 0.001;
+        renderer.render({
+          scene: mesh,
+          camera,
+        });
 
-      renderer.render({
-        scene: mesh,
-        camera, // 🔥 مهم جدًا
-      });
-    };
+        raf = requestAnimationFrame(update);
+      };
 
-    raf = requestAnimationFrame(update);
+      // شغل الـ Shader بعد انتهاء تحميل الصفحة
+      const start = () => {
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(() => {
+            raf = requestAnimationFrame(update);
+          });
+        } else {
+          setTimeout(() => {
+            raf = requestAnimationFrame(update);
+          }, 1000);
+        }
+      };
 
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
+      if (document.readyState === "complete") {
+        start();
+      } else {
+        window.addEventListener("load", start, { once: true });
+      }
 
+      return () => {
+        cancelAnimationFrame(raf);
+        window.removeEventListener("resize", resize);
+      };
+  })
   return (
     <canvas
+      className="max-w-full max-h-full"
       ref={canvasRef}
       style={{
         inset: 0,

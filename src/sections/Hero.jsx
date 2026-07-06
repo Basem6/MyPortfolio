@@ -23,7 +23,6 @@ const scrollToProjects = (e) => {
   const ctaRef = useRef(null)
   const scrollRef = useRef(null)
   const left = useRef(null)
-  const overlay = useRef(null)
   const right = useRef(null)
   const backshader= useRef(null)
   const down = useRef(null)
@@ -128,7 +127,7 @@ const scrollToProjects = (e) => {
             See Projects
           </a>
           <a
-            href="/src/assets/pdf/my_cv.pdf"
+            href="/src/assets/pdf/BASEM_MAHMOUD_FlowCV_Resume_2026-06-15.pdf"
             className="px-6 py-2 btn   text-white   transition-all duration-300 "
           >
             View Resume
@@ -152,7 +151,7 @@ const scrollToProjects = (e) => {
 
       {/* ── WebGL noise shader background ── */}
       <div className="absolute inset-0 -z-50 opacity-0" ref={backshader}>
-        <NoiseShader className={"max-w-full max-h-full"}/>
+        <NoiseShader/>
       </div>
     </section>
     </>

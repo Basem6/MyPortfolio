@@ -2,8 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import girl from "/src/assets/girlphot.jpg"
-import ropot from "/src/assets/ropot.jpg"
+import girl from "/src/assets/girlphot.webp"
+import ropot from "/src/assets/ropot.webp"
+import jar from "/src/assets/Screenshot 2026-06-25 175758.png"
+import dashboard from "/src/assets/dashboard.png"
     // import required modules
     import { Pagination, Navigation } from 'swiper/modules';
     import Button from './Arrow';
@@ -32,6 +34,7 @@ import { Link } from 'react-router-dom';
                 <Link to={"https://e-commerce-uo5k83pi1-basem6s-projects.vercel.app/"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
+                    alt="E-commerce project screenshot"
                     src={girl}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
@@ -60,10 +63,11 @@ import { Link } from 'react-router-dom';
                 </Link>
             </SwiperSlide>
             <SwiperSlide> 
-                <Link to={""}>
+                <Link to={"https://landingpage-jaj3r7ip1-basem6s-projects.vercel.app/"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src={girl}
+                    alt="Landing page project screenshot"
+                    src={jar}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -75,9 +79,11 @@ import { Link } from 'react-router-dom';
                 </Link>
             </SwiperSlide>
             <SwiperSlide> 
+                <Link to={"https://advance-dashboard-ol870lkod-basem6s-projects.vercel.app/"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src={girl}
+                    alt="Dashboard interface project screenshot"
+                    src={dashboard}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -86,11 +92,12 @@ import { Link } from 'react-router-dom';
                         <Button></Button>
                     </div>
                 </div>
+                </Link>
             </SwiperSlide>
             <SwiperSlide> 
+                <Link to={"https://todo-app32.vercel.app/"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
-                    <img
-                    src={ropot}
+                    <img                    alt="Todo app project screenshot"                    src={ropot}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -99,6 +106,7 @@ import { Link } from 'react-router-dom';
                         <Button></Button>
                     </div>
                 </div>
+                </Link>
             </SwiperSlide>
         </Swiper>
         </>
