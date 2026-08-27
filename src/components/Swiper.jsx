@@ -4,7 +4,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import volera from "/src/assets/Screenshot 2026-06-25 164608.png"
 import estatehun from "/src/assets/Screenshot 2026-07-15 091811.png"
-import freelancerproject from "/src/assets/Screenshot 2026-06-25 164608.png"
+import freelancerproject from "/src/assets/Screenshot 2026-08-27 004509.png"
 import jar from "/src/assets/Screenshot 2026-06-25 175758.png"
 import dashboard from "/src/assets/dashboard.png"
     // import required modules

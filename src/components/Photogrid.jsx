@@ -7,7 +7,7 @@ import{ScrollSmoother} from "gsap/ScrollSmoother"
 import man from "/src/assets/manphot.webp"
 import volera from "/src/assets/Screenshot 2026-06-25 164608.png"
 import estatehun from "/src/assets/Screenshot 2026-07-15 091811.png"
-import freelancerproject from "/src/assets/Screenshot 2026-06-25 164608.png"
+import freelancerproject from "/src/assets/Screenshot 2026-08-27 004509.png"
 import dashboard from "/src/assets/dashboard.png"
 gsap.registerPlugin(ScrollTrigger);
 export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {

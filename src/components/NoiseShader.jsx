@@ -222,7 +222,7 @@ export default function NoiseShader() {
       const start = () => {
     setTimeout(() => {
       raf = requestAnimationFrame(update);
-    }, 1600);
+    }, 1450);
   };
 
       if (document.readyState === "complete") {
