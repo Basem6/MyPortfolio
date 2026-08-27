@@ -5,6 +5,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import{ScrollSmoother} from "gsap/ScrollSmoother"
 import man from "/src/assets/manphot.webp"
+import volera from "/src/assets/Screenshot 2026-06-25 164608.png"
+import estatehun from "/src/assets/Screenshot 2026-07-15 091811.png"
+import freelancerproject from "/src/assets/Screenshot 2026-06-25 164608.png"
 import dashboard from "/src/assets/dashboard.png"
 gsap.registerPlugin(ScrollTrigger);
 export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
@@ -56,12 +59,12 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
             <div className="overflow-hidden card rounded-sm  col-span-1 row-span-2 relative -z-1" ref={leftphoto}>
                     <a
                     href="https://e-commerce-uo5k83pi1-basem6s-projects.vercel.app/"
-                    target="_blank"
+                    target="_self"
                     rel="noopener noreferrer"
                     >
                 <img
                 alt="E-commerce project screenshot"
-                src="/src/assets/Screenshot 2026-06-25 164608.png"
+                src={volera}
                 className="w-full h-full will-change-transform  object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
                 <div className="flex gap-2 absolute bg-gray-400/30  border-gray-50/20 border-[1px] justify-center items-center bottom-2 left-1/2 text-sm  -translate-x-1/2 min-w-[95%] rounded-full">
@@ -89,12 +92,12 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
                 {/* FIX: same external link issue as above */}
                     <a
                     href="https://freelance-hub-c7ws.vercel.app"
-                    target="_blank"
+                    target="_self"
                     rel="noopener noreferrer"
                     >
                 <img
-                alt="Todo app project screenshot"
-                src="/src/assets/Screenshot 2026-08-27 004509.png"
+                alt="freelance website"
+                src={freelancerproject}
                 className="w-full h-full will-change-transform  card object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 /> 
                 <div className="flex gap-2 absolute bg-gray-400/30 border-gray-50/20 border-[1px]   justify-center items-center bottom-2 left-1/2 text-sm  -translate-x-1/2 min-w-[95%] rounded-full">
@@ -107,13 +110,13 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
             <div className="overflow-hidden card rounded-sm col-span-1 row-span-2 relative">
                 <a
                     href="https://estate-dgapy9769-basem6s-projects.vercel.app/"
-                    target="_blank"
+                    target="_self"
                     rel="noopener noreferrer"
                 >
                 <img
                 alt="Landing page project screenshot"
                 loading="lazy"
-                src="/src/assets/Screenshot 2026-07-15 091811.png"
+                src={estatehun}
                 className="w-full h-full will-change-transform  card object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
                 <div className="flex gap-2 absolute bg-gray-400/30 border-gray-50/20 border-[1px]  justify-center items-center bottom-2 left-1/2 text-sm  -translate-x-1/2 min-w-[95%] rounded-full">
@@ -126,7 +129,7 @@ export default function PhotoGrid({ enterBigPhoto, leave ,tl}) {
             <div className="overflow-hidden card rounded-sm col-span-1 row-span-2 relative">
                 <a
                     href="https://advance-dashboard-ol870lkod-basem6s-projects.vercel.app"
-                    target="_blank"
+                    target="_self"
                     rel="noopener noreferrer"
                 >
                 <img

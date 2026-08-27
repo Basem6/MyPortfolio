@@ -2,8 +2,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import girl from "/src/assets/girlphot.webp"
-import ropot from "/src/assets/ropot.webp"
+import volera from "/src/assets/Screenshot 2026-06-25 164608.png"
+import estatehun from "/src/assets/Screenshot 2026-07-15 091811.png"
+import freelancerproject from "/src/assets/Screenshot 2026-06-25 164608.png"
 import jar from "/src/assets/Screenshot 2026-06-25 175758.png"
 import dashboard from "/src/assets/dashboard.png"
     // import required modules
@@ -35,7 +36,7 @@ import { Link } from 'react-router-dom';
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
                     alt="E-commerce project screenshot"
-                    src="/src/assets/Screenshot 2026-06-25 164608.png"
+                    src={volera}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -51,7 +52,7 @@ import { Link } from 'react-router-dom';
                 <Link to={"https://freelance-hub-c7ws.vercel.app"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src="/src/assets/Screenshot 2026-08-27 004509.png"
+                    src={freelancerproject}
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -97,7 +98,7 @@ import { Link } from 'react-router-dom';
             <SwiperSlide> 
                 <Link to={"https://estate-dgapy9769-basem6s-projects.vercel.app"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
-                    <img                    alt="Todo app project screenshot"                    src="/src/assets/Screenshot 2026-07-15 091811.png"
+                    <img                    alt="Todo app project screenshot"                    src={estatehun }
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
