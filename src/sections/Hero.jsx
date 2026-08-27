@@ -128,7 +128,7 @@ const scrollToProjects = (e) => {
             See Projects
           </a>
           <a
-            href="/src/assets/pdf/BASEM_MAHMOUD_FlowCV_Resume_2026-06-15.pdf"
+            href="/src/assets/pdf/cv.pdf"
             className="px-6 py-2 btn   text-white   transition-all duration-300 "
           >
             View Resume
