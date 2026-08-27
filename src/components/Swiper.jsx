@@ -64,7 +64,7 @@ import { Link } from 'react-router-dom';
                 </Link>
             </SwiperSlide>
             <SwiperSlide> 
-                <Link to={"https://landingpage-jaj3r7ip1-basem6s-projects.vercel.app/"}>
+                <Link to={"https://landingpage-omega-six-26.vercel.app"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
                     alt="Landing page project screenshot"
