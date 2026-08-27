@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
+import { delay } from 'framer-motion';
 gsap.registerPlugin(ScrollTrigger,SplitText);
 export default function Hero({tl}) {
 const scrollToProjects = (e) => {
@@ -55,10 +56,10 @@ const scrollToProjects = (e) => {
     x: -15,
     },"+=1")
     tl.to(backshader.current,{
-      opacity:1
+      opacity:1,
     },"<")
     tl.from(badgeRef.current,{
-      opacity:0
+      opacity:0,
     },"-=1.4")
     tl.from(down.current,{
       opacity:0,

@@ -23,20 +23,22 @@ export default function About() {
             </div>
           </div>
           <div className='py-8 mt-4 border-t border-b border-gray-400/20 flex gap-2.5 flex-wrap'>
-            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Web design</span>
-            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>React</span>
-            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Gsap</span>
             <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Web development</span>
-            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>github</span>
-            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Ai</span>
-            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Figma</span>
-            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Soft skills</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Next js</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>React</span>
             <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Js</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Web design</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Gsap</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Tailwind Css</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Rest Api</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Problem Solving</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Ai</span>
+            <span className='bg-white/5 py-1.5 px-4 rounded-lg text-gray-300/70'>Soft skills</span>
           </div>
           <div className='py-8 mt-4 flex gap-2.5 flex-wrap'>
             <p className="text-lg text-text-secondary leading-[1.8]">
-                I am a first-year Computer Science student at Tanta University, passionate about web development and building modern, responsive user interfaces.
-                I enjoy turning ideas into real projects using frontend technologies like React and Tailwind CSS
+                I am a secend-year Computer Science student at Tanta University, passionate about web development and building modern, responsive user interfaces.
+                I enjoy turning ideas into real projects using frontend technologies like Next js and Tailwind CSS
               </p>
           </div>
         </div>

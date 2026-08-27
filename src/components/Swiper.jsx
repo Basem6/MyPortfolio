@@ -35,7 +35,7 @@ import { Link } from 'react-router-dom';
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
                     alt="E-commerce project screenshot"
-                    src={girl}
+                    src="/src/assets/Screenshot 2026-06-25 164608.png"
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -48,10 +48,10 @@ import { Link } from 'react-router-dom';
             </SwiperSlide>
             
             <SwiperSlide> 
-                <Link to={"https://todo-app32.vercel.app/"}>
+                <Link to={"https://freelance-hub-c7ws.vercel.app"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
                     <img
-                    src={ropot}
+                    src="/src/assets/Screenshot 2026-08-27 004509.png"
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />
@@ -95,9 +95,9 @@ import { Link } from 'react-router-dom';
                 </Link>
             </SwiperSlide>
             <SwiperSlide> 
-                <Link to={"https://todo-app32.vercel.app/"}>
+                <Link to={"https://estate-dgapy9769-basem6s-projects.vercel.app"}>
                 <div className="overflow-hidden card grow rounded-sm  col-span-1 row-span-2 relative size-80">
-                    <img                    alt="Todo app project screenshot"                    src={ropot}
+                    <img                    alt="Todo app project screenshot"                    src="/src/assets/Screenshot 2026-07-15 091811.png"
                     loading="lazy"
                     className="w-full h-full object-cover card  grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                     />

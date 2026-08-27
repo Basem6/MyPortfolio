@@ -220,16 +220,10 @@ export default function NoiseShader() {
 
       // شغل الـ Shader بعد انتهاء تحميل الصفحة
       const start = () => {
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(() => {
-            raf = requestAnimationFrame(update);
-          });
-        } else {
-          setTimeout(() => {
-            raf = requestAnimationFrame(update);
-          }, 1000);
-        }
-      };
+    setTimeout(() => {
+      raf = requestAnimationFrame(update);
+    }, 1600);
+  };
 
       if (document.readyState === "complete") {
         start();
