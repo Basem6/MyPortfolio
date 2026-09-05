@@ -110,7 +110,7 @@ const scrollToProjects = (e) => {
 
         <p
           ref={descRef}
-          className="mt-8 text-md  text-text-secondary max-w-2xl mx-auto leading-relaxed"
+          className="mt-8 md:text-md text-sm  text-text-secondary max-w-2xl mx-auto leading-relaxed"
           
         >
           A passionate developer crafting beautiful, performant digital
