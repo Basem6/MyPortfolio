@@ -6,7 +6,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
-import { delay } from 'framer-motion';
 gsap.registerPlugin(ScrollTrigger,SplitText);
 export default function Hero({tl}) {
 const scrollToProjects = (e) => {
@@ -128,7 +127,9 @@ const scrollToProjects = (e) => {
             See Projects
           </a>
           <a
-            href="/src/assets/pdf/cv.pdf"
+            href="/pdf/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-2 btn   text-white   transition-all duration-300 "
           >
             View Resume
