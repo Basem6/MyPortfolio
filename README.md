@@ -1,6 +1,7 @@
 ## 📸 Preview
 ![Portfolio Preview](./src/assets/screenshots/myportfolio.png)
-
+## 📸 Performance
+![Portfolio Preview](./src/assets/screenshots/lighthouse-portfolio.png)
 # 🚀 My Portfolio
 
 Welcome to my personal portfolio website!  
