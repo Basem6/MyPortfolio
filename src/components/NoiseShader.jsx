@@ -166,8 +166,6 @@ export default function NoiseShader() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
-
     const renderer = new Renderer({ canvas });
     const gl = renderer.gl;
 
@@ -222,7 +220,7 @@ export default function NoiseShader() {
       const start = () => {
     setTimeout(() => {
       raf = requestAnimationFrame(update);
-    }, 1450);
+    }, 50);
   };
 
       if (document.readyState === "complete") {
@@ -235,7 +233,7 @@ export default function NoiseShader() {
         cancelAnimationFrame(raf);
         window.removeEventListener("resize", resize);
       };
-  })
+  },[])
   return (
     <canvas
       className="max-w-full max-h-full"

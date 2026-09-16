@@ -1,26 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "tailwindcss";
-/* ===== Custom Theme — Monochrome Black & White ===== */
-@theme {
-  --color-primary: #ffffff;
-  --color-primary-light: #e4e4e7;
-  --color-primary-dark: #d4d4d8;
-  --color-secondary: #a1a1aa;
-  --color-accent: #f4f4f5;
-  --color-dark: #000000;
-  --color-dark-light: #09090b;
-  --color-dark-lighter: #18181b;
-  --color-surface: #0a0a0a;
-  --color-surface-light: #141414;
-  --color-text-primary: #fafafa;
-  --color-text-secondary: #a1a1aa;
-  --color-text-muted: #52525b;
-
-  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --font-display: 'Outfit', 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-}
 *{
   user-select: none;
 }
@@ -83,11 +62,11 @@ body {
   padding: 1.6px;
 }
 .btn:hover{
-  transition: all 500ms linear;
+  transition: box-shadow 500ms linear;
   box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.071) ;
 }
 .btn:hover::before{
-    transition: all 500ms linear;
+    transition: background-color 500ms linear;
     background: linear-gradient(
     27deg,
     rgba(255,255,255),
@@ -134,7 +113,14 @@ body {
   width: 250px;
   right: -100%;
   transform: translateX(100%);
-  
+}
+.rotatenavtop{
+transform: translateY(4px) rotate(30deg);
+will-change: transform;
+}
+.rotatenavbot{
+transform: translateY(-4px) rotate(-30deg);
+will-change: transform;
 }
 .card:hover .button__icon-svg:first-child {
     transition: transform 0.3s ease-in-out;
@@ -144,10 +130,6 @@ body {
 .card:hover .button__icon-svg--copy{
     transition: transform 0.3s ease-in-out 0.1s;
     transform: translate(0);
-}
-.swiper {
-
-  --swiper-navigation-color: rgba(238, 237, 237, 0.895);
 }
 .swiper-button-prev,
 .swiper-button-next {
@@ -166,38 +148,4 @@ body {
 .swiper-button-next::after {
   font-size: 10px;
   font-weight: 700;
-}
-.rotatenavtop{
-transform: translateY(4px) rotate(30deg);
-will-change: transform;
-}
-.rotatenavbot{
-transform: translateY(-4px) rotate(-30deg);
-will-change: transform;
-}
-.card-s {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 50px;
-  height: 500px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-}
-.card-s:nth-child(even) {
-  margin-top: 200px;
-}
-
-.outlined-text {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-  text-stroke: 1px rgba(255, 255, 255, 0.2);
-  color: transparent;
-}
-
-.draggable-card {
-  max-width: 500px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  position:absolute;
-  
 }

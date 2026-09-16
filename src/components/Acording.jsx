@@ -1,121 +1,100 @@
-    import * as React from 'react';
-    import Accordion from '@mui/material/Accordion';
-    import AccordionSummary from '@mui/material/AccordionSummary';
-    import AccordionDetails from '@mui/material/AccordionDetails';
-    import Typography from '@mui/material/Typography';
-    import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-    export default function AccordionUsage() {
-    const id = React.useId();
-    return (
-        <div className='flex flex-col gap-3.5 rounded-[30px] answer'>
-            <Accordion  sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderTopLeftRadius:"inhert" ,display:"none" , }}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span"  sx={{fontSize:"26px"}}>What services do you porvide</Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
-                I am provide the web development as a serviecs
-                </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderRadius:"30px" }}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span"  sx={{fontSize: { xs: "18px", md: "26px" }}}>What services do you porvide</Typography>
-                </AccordionSummary>
-                <AccordionDetails   sx={{fontSize: { xs: "14px", md: "18px" }, color:"GrayText"}}>
-                I am provide the web development as a serviecs
-                </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderRadius:"30px" }}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>How do I start working with you</Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{fontSize: { xs: "14px", md: "18px" }, color:"GrayText"}}>
-                It starts with a free discovery call. We’ll discuss your goals, vision, and how I can bring your ideas to life.
-                </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderRadius:"30px" }}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>How long does a project take?</Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{fontSize: { xs: "14px", md: "18px" }, color:"GrayText"}}>
-                Project timelines vary based on scope, but most designs take 2–4 weeks. I’ll provide a clear timeline after our initial consultation.
-                </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderRadius:"30px" }}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>Do you provide revisions?</Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{fontSize: { xs: "14px", md: "18px" }, color:"GrayText"}}>
-                Absolutely! I offer a set number of revisions to ensure the design perfectly aligns with your vision.
-                </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderRadius:"30px" }}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>What industries do you work with?</Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{fontSize: { xs: "14px", md: "18px" }, color:"GrayText"}}>
-                From tech startups to creative agencies, I collaborate with a range of industries — adapting designs to fit each brand’s unique identity.
-                </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderRadius:"30px" }}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>What is your pricing structure?</Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{fontSize: { xs: "14px", md: "18px" }, color:"GrayText"}}>
-                Pricing depends on the project’s complexity and scope. Let’s discuss your goals, and I’ll provide a transparent quote tailored to your needs.
-                </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderRadius:"30px" }}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span" sx={{fontSize: { xs: "18px", md: "26px" }}}>Can you redesign my existing website?</Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{fontSize: { xs: "14px", md: "18px" }, color:"GrayText"}}>
-                Definitely! I can transform your outdated site into a modern, user-friendly experience that reflects your brand’s evolution.
-                </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{backgroundColor:"#0f0f0f",color:"white" ,fontSize:"16px", padding:"7px 12px",borderRadius:"30px", display:"none"}}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{color:"white"}}/>}
-                aria-controls={`${id}-panel1-content`}
-                id={`${id}-panel1-header`}
-                >
-                <Typography component="span" sx={{fontSize:"26px"}}>What services do you porvide</Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{color:"GrayText"}}>
-                I am provide the web development as a serviecs
-                </AccordionDetails>
-            </Accordion>
+import { useState } from "react";
+import ChevronDown from "../components/Expandsvg";
+
+const faqs = [
+{
+    question: "What services do you provide?",
+    answer:
+    "I provide frontend web development services, building modern, responsive, and performant websites.",
+},
+{
+    question: "How do I start working with you?",
+    answer:
+    "It starts with a free discovery call. We’ll discuss your goals, vision, and how I can bring your ideas to life.",
+},
+{
+    question: "How long does a project take?",
+    answer:
+    "Project timelines vary based on scope, but most projects take 2–4 weeks. I’ll provide a clear timeline after our initial consultation.",
+},
+{
+    question: "Do you provide revisions?",
+    answer:
+    "Absolutely! I offer a set number of revisions to ensure the final result aligns with your vision.",
+},
+{
+    question: "What industries do you work with?",
+    answer:
+    "From tech startups to creative agencies, I collaborate with different industries and adapt each website to the brand’s identity.",
+},
+{
+    question: "What is your pricing structure?",
+    answer:
+    "Pricing depends on the project’s complexity and scope. Let’s discuss your goals, and I’ll provide a transparent quote tailored to your needs.",
+},
+{
+    question: "Can you redesign my existing website?",
+    answer:
+    "Definitely! I can transform your outdated website into a modern, user-friendly experience that reflects your brand’s evolution.",
+},
+];
+
+export default function AccordionUsage() {
+const [openIndex, setOpenIndex] = useState(null);
+
+const toggleAccordion = (index) => {
+    setOpenIndex((current) => (current === index ? null : index));
+};
+
+return (
+    <div className="flex flex-col gap-3.5 rounded-[30px] answer">
+    {faqs.map((faq, index) => {
+        const isOpen = openIndex === index;
+        const answerId = `faq-answer-${index}`;
+
+        return (
+        <div
+            key={faq.question}
+            className="overflow-hidden rounded-[30px] bg-[#0f0f0f] text-white"
+        >
+            <button
+            type="button"
+            onClick={() => toggleAccordion(index)}
+            aria-expanded={isOpen}
+            aria-controls={answerId}
+            className="flex w-full items-center justify-between gap-5 px-5 py-4 text-left"
+            >
+            <span className="text-[18px] md:text-[26px]">
+                {faq.question}
+            </span>
+
+            <span
+                className={`shrink-0 transition-transform duration-300 ${
+                isOpen ? "rotate-180" : "rotate-0"
+                }`}
+                aria-hidden="true"
+            >
+                <ChevronDown />
+            </span>
+            </button>
+
+            <div
+            id={answerId}
+            className={`grid transition-[grid-template-rows,opacity] duration-300 ${
+                isOpen
+                ? "grid-rows-[1fr] opacity-100"
+                : "grid-rows-[0fr] opacity-0"
+            }`}
+            >
+            <div className="overflow-hidden">
+                <p className="px-5 pb-5 text-[14px] leading-relaxed text-gray-400 md:text-[18px]">
+                {faq.answer}
+                </p>
+            </div>
+            </div>
         </div>
-    );
-    }
+        );
+    })}
+    </div>
+);
+}

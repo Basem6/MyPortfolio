@@ -1,24 +1,16 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { useRef } from "react";
 import MarqueeImport from "react-fast-marquee";
-export function Skills(){
-    const bar=useRef(null)
+export default function Skills(){
     const Marquee = MarqueeImport?.default || MarqueeImport;
-    const array_brands = ["react" , "github", "html5", "js" ,]
-    useGSAP(()=>{
-        gsap.from(bar.current,{
-            delay:2.7,
-            opacity:0
-        })
-    },[])
     return (
-        <div ref={bar} className="mt-20">
+        <div  className="my-15">
             <div className="text-white flex justify-center items-center flex-col max-w-7xl mx-auto px-0 md:px-40 lg:px-90 " >
-                <Marquee speed={60} direction="left"  gradient={false} loop={0} gradient={true} gradientColor={["#000000f4", 0, "#000000f4"]} gradientWidth={100}>
-                {array_brands.map((skill , index)=>{
-                return <div className={`fa-brands fa-${skill} text-gray-400 text-3xl px-8 md:text-5xl md:px-14 py-6 `} key={index}></div>
-                })}
+                    <Marquee speed={60} direction="left"   loop={0} gradient={true} gradientColor={["#000000f4", 0, "#000000f4"]} gradientWidth={100}>
+                        <div className="flex md:gap-18 gap-12">
+                        <div className="md:size-15 size-10"><img src="/github-brands-solid-full.svg" alt="github" loading="lazy"/></div>
+                        <div className="md:size-15 size-10"><img src="/js-brands-solid-full.svg" alt="js" loading="lazy" /></div>
+                        <div className="md:size-15 size-10"><img src="/tailwind-css-brands-solid-full.svg" alt="tailwind" loading="lazy" /></div>
+                        <div className="md:size-15 size-10"><img src="/react-brands-solid-full.svg" alt="react" loading="lazy" /></div>
+                        </div>
                 </Marquee>
             </div>
         </div>

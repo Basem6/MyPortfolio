@@ -1,19 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ScrollSmoother } from 'gsap/ScrollSmoother'
-import { HiMenuAlt3, HiX } from 'react-icons/hi'
-
+import {ScrollSmoother} from '../lib/gsap'
 const navLinks = [
-  // FIX: was { name: 'Services', href: '#home' } — label didn't match the target section
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ]
 
-// FIX: use ScrollSmoother.get() so navigation respects the virtual scroll layer.
-// Native scrollIntoView bypasses ScrollSmoother and causes jumps / broken animations.
 function  scrollToSection(href , pos) {
   const smoother = ScrollSmoother.get()
   if (smoother) {
@@ -38,55 +31,58 @@ function  scrollToSection(href , pos) {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  // FIX: track active section for ScrollSpy highlight
   const [activeSection, setActiveSection] = useState('#home')
   const navRef = useRef(null)
-  const mobileMenuRef = useRef(null)
 
-  // ── ScrollSpy: use ScrollTrigger (not IntersectionObserver) so it stays in
-  //    sync with ScrollSmoother's virtual scroll position ───────────────────
-  useEffect(() => {
-    const sectionIds = navLinks.map(l => l.href.replace('#', ''))
-    const triggers = sectionIds.map(id => {
-      const el = document.getElementById(id)
-      if (!el) return null
-      return ScrollTrigger.create({
-        trigger: el,
-        start: 'top center',
-        end: 'bottom center',
-        onToggle: ({ isActive }) => {
-          if (isActive) setActiveSection(`#${id}`)
-        },
-      })
-    }).filter(Boolean)
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleSection = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort(
+          (a, b) => b.intersectionRatio - a.intersectionRatio
+        )[0];
 
-    return () => triggers.forEach(t => t.kill())
-  }, [])
-
-  // ── Animate mobile menu ────────────────────────────────────────────────────
-  useEffect(() => {
-    if (mobileMenuRef.current) {
-      if (isOpen) {
-        gsap.fromTo(
-          mobileMenuRef.current,
-          { height: 0, opacity: 0 },
-          { height: 'auto', opacity: 1, duration: 0.4, ease: 'power2.out' }
-        )
-        gsap.fromTo(
-          mobileMenuRef.current.querySelectorAll('a'),
-          { x: -20, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.3, stagger: 0.05, ease: 'power2.out', delay: 0.15 }
-        )
-      } else {
-        gsap.to(mobileMenuRef.current, {
-          height: 0,
-          opacity: 0,
-          duration: 0.3,
-          ease: 'power2.in',
-        })
+      if (visibleSection) {
+        setActiveSection(`#${visibleSection.target.id}`);
       }
+    },
+    {
+      rootMargin: "-45% 0px -45% 0px",
+      threshold: [0, 0.25, 0.5, 0.75, 1],
     }
-  }, [isOpen])
+  );
+
+  const observed = new Set();
+
+  const observeSections = () => {
+    navLinks.forEach(({ href }) => {
+      const section = document.getElementById(href.slice(1));
+
+      if (section && !observed.has(section)) {
+        observer.observe(section);
+        observed.add(section);
+      }
+    });
+  };
+
+  observeSections();
+
+  const mutationObserver = new MutationObserver(() => {
+    observeSections();
+  });
+
+  mutationObserver.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+
+  return () => {
+    mutationObserver.disconnect();
+    observer.disconnect();
+  };
+}, []);
+
 
   // FIX: prevent default anchor jump, then delegate to ScrollSmoother
   const handleNavClick = (e, href) => {
@@ -103,6 +99,7 @@ export default function Navbar() {
 
   return (
     <nav
+      aria-label="Main navigation"
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 p-2.5 bg-black/80 backdrop-blur-xl shadow-lg shadow-black/50 max-w-full`}
     >
@@ -140,27 +137,57 @@ export default function Navbar() {
                 className="ml-6 px-6 flex gap-2.5 items-center justify-center text-md  bg-gray-500/20 text-gray-300 border-gray-300/20 border-[1px]  rounded-full  transition-all duration-300"
               >
                 {/* FIX: was `class` — invalid in JSX, must be `className` */}
-                <span className="fa-regular fa-star rotate-90 "></span>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#e4e5e1"
+                    strokeWidth="0.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-sparkles"
+                    aria-hidden="true"
+                  >
+                    <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+                    <path d="M20 2v4" />
+                    <path d="M22 4h-4" />
+                    <circle cx="4" cy="20" r="2" />
+                  </svg>
+                </div>
                 <span>Hire Me</span>
               </a>
             </div>
             {/* Mobile Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
               className="md:hidden text-text-white hover:text-white p-3   "
             >
               <div className='flex flex-col items-center justify-center gap-1.5'>
-                <div className={'min-w-5 bg-gray-100 min-h-0.5 transition duration-300 ' + `${isOpen?"rotatenavtop":""}`}></div>
-                <div className={'min-w-5 bg-gray-100 min-h-0.5 transition duration-300 ' + `${isOpen?"rotatenavbot":""}`}></div>
+                <div
+                  aria-hidden="true"
+                  className={'min-w-5 bg-gray-100 min-h-0.5 transition duration-300 ' + `${isOpen?"rotatenavtop":""}`}
+                ></div>
+
+                <div
+                  aria-hidden="true"
+                  className={'min-w-5 bg-gray-100 min-h-0.5 transition duration-300 ' + `${isOpen?"rotatenavbot":""}`}
+                ></div>
               </div>
             </button>
           </div>
         </div>
         {/* Mobile Menu */}
         <div
-          ref={mobileMenuRef}
-          className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/5 overflow-hidden"
-          style={{ height: 0, opacity: 0 }}
+        className={`md:hidden bg-black/95 backdrop-blur-xl border-t border-white/5 overflow-hidden transition-[max-height,opacity] duration-300 ${
+          isOpen
+            ? 'max-h-96 opacity-100'
+            : 'max-h-0 opacity-0'
+        }`}
         >
           <div className="px-8 py-6 space-y-2">
             {navLinks.map((link) => (

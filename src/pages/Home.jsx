@@ -1,18 +1,25 @@
+import { lazy, Suspense } from 'react';
 import Hero from '../sections/Hero'
-import About from '../sections/About'
-import PhotoGrid from '../components/Photogrid'
-import { Works } from '../components/Works'
-import { Answers } from '../sections/Answers'
-import { Skills } from '../components/Skills'
-export default function Home({ enterBigPhoto, enterProject, leave, tl }) {
+const PhotoGrid = lazy(() => import("../sections/Photogrid"));
+const About = lazy(() => import("../sections/About"));
+const Answers = lazy(() => import("../sections/Answers"));
+import  Skills  from '../components/Skills'
+import  Works  from '../sections/Works';
+export default function Home() {
   return (
     <>
-      <Hero tl={tl} />
+      <Hero />
       <Skills/>
-      <PhotoGrid tl={tl} enterBigPhoto={enterBigPhoto} enterProject={enterProject} leave={leave} />
+      <Suspense fallback={<div className="h-200" />}>
+        <PhotoGrid />
+      </Suspense>
+      <Suspense fallback={<div className="h-200" />}>
       <About />
+      </Suspense>
       <Works/>
+      <Suspense fallback={<div className="h-200" />}>
       <Answers/>
+      </Suspense>
     </>
   )
 }
