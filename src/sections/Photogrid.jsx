@@ -195,7 +195,7 @@ return (
 
             <div className="overflow-hidden card rounded-sm col-span-1 row-span-2 relative">
             <a
-                href="https://estate-dgapy9769-basem6s-projects.vercel.app"
+                href="https://estate-hub-bay.vercel.app/"
                 target="_self"
                 rel="noopener noreferrer"
                 aria-label="View Estate Hub project case study"
