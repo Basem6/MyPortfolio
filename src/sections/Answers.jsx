@@ -2,6 +2,7 @@ import { gsap, useGSAP} from "../lib/gsap";
 import AccordionUsage from "../components/Acording";
 import ropot from "/src/assets/ropot.png"
 import { useRef } from "react";
+import NoiseShader from "../components/NoiseShader";
 export default function Answers() {
     const sectionanswer = useRef(null)
     const sectiontop = useRef(null)
@@ -157,6 +158,12 @@ export default function Answers() {
                     />
                     </a>
                 </div>
+                </div>
+                <div
+                    className="absolute inset-0 -z-50"
+                    aria-hidden="true"
+                >
+                    <NoiseShader />
                 </div>
             </div>
         </section>

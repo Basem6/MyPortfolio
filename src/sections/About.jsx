@@ -1,3 +1,4 @@
+import Lanyard from "../components/Lanyard"
 import basem from "/src/assets/beso.jpeg"
 export default function About() {
   return (
@@ -50,14 +51,8 @@ export default function About() {
           </div>
         </div>
 
-        <div className="w-full md:w-300 md:h-150 overflow-hidden rounded-lg">
-          <img
-            alt="Portrait of Basem Mahmoud"
-            src={basem}
-            loading="lazy"
-            decoding="async"
-            className="grayscale hover:grayscale-0 hover:scale-105 transition duration-700 object-cover min-w-full min-h-full max-w-full max-h-full ease-in-out"
-          />
+        <div className="w-full md:w-300 md:h-150  rounded-lg">
+          <Lanyard></Lanyard>
         </div>
       </div>
     </section>
