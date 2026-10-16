@@ -118,18 +118,15 @@ export default function Answers() {
                     </a>
                 </div>
 
-                <div className="flex gap-3 min-w-full justify-center py-12">
+                <div className="flex gap-3 z-50 min-w-full justify-center py-12">
                     <a
                     href="https://github.com/Basem6"
                     aria-label="Visit my GitHub profile"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex p-3 bg-gray-900/20 rounded-full transition-all duration-300"
+                    className="flex  bg-gray-900/20 size-10 rounded-full transition-all duration-300"
                     >
-                    <span
-                        className="fa-brands fa-github text-gray-50 text-2xl hover:scale-125 transition duration-300 hover:text-blue-400/80"
-                        aria-hidden="true"
-                    />
+                        <img src="/github-brands-solid-full.svg" className="w-full h-full" alt="githup" />
                     </a>
 
                     <a
@@ -137,30 +134,14 @@ export default function Answers() {
                     aria-label="Visit my LinkedIn profile"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex p-3 bg-gray-900/20 rounded-full transition-all duration-300"
+                    className="flex  bg-gray-900/20 size-10 rounded-full transition-all duration-300"
                     >
-                    <span
-                        className="fa-brands fa-linkedin text-gray-50 text-2xl hover:scale-125 transition duration-300 hover:text-blue-400/80"
-                        aria-hidden="true"
-                    />
-                    </a>
-
-                    <a
-                    href="https://www.facebook.com/share/1AzTGPdiGX/"
-                    aria-label="Visit my Facebook profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex p-3 bg-gray-900/20 rounded-full transition-all duration-300"
-                    >
-                    <span
-                        className="fa-brands fa-facebook text-gray-50 text-2xl hover:scale-125 transition duration-300 hover:text-blue-400/80"
-                        aria-hidden="true"
-                    />
+                    <img src="/linkedin-in-brands-solid.svg" className="w-full scale-75 h-full" alt="linkedin" />
                     </a>
                 </div>
                 </div>
                 <div
-                    className="absolute inset-0 -z-50"
+                    className="absolute inset-0 -z-9999"
                     aria-hidden="true"
                 >
                     <NoiseShader />

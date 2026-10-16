@@ -707,7 +707,7 @@ const Lanyard = ({
   orientation = 'portrait',
   finish = 'glossy',
   cornerRadius = 0.3,
-  size = 0.6,
+  size = 0.7,
   anchor = 'center',
   strapLength = 0.5,
   strapImage,
