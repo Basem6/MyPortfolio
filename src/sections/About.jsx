@@ -1,5 +1,4 @@
 import Lanyard from "../components/Lanyard"
-import basem from "/src/assets/beso.jpeg"
 export default function About() {
   return (
     <section
