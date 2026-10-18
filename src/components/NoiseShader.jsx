@@ -271,7 +271,7 @@ const link = (gl, fragmentSource) => {
 };
 
 const NoiseShader = ({
-  color = '#ffffff',
+  color = '#464545',
   speed = 0.2,
   amplitude = 0.3,
   frequencyX = 3,

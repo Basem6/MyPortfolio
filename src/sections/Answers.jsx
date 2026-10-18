@@ -80,7 +80,7 @@ export default function Answers() {
             </div>
 
             <div
-                className="lg:absolute min-h-screen flex overflow-hidden bg-black items-center flex-col justify-center pt-38 -z-10 left-0 inset-0"
+                className="relative md:absolute min-h-screen flex overflow-hidden bg-black items-center flex-col justify-center pt-38 -z-10 left-0 inset-0"
                 id="contact"
             >
                 <div className="relative max-w-7xl mx-auto px-8 lg:px-0 text-center">

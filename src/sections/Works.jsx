@@ -1,5 +1,5 @@
-import ChromaGrid  from "../components/CircularGallery";
-
+import { lazy, Suspense } from 'react';
+const FlexCarousel = lazy(() => import("../components/FlexCarousel"));
 export default function Works(){
 return(
     <section
@@ -27,8 +27,32 @@ return(
             </svg>
             </span>
         </div>
-        <div className="min-w-full min-h-100">
-            <ChromaGrid></ChromaGrid>
+        <div className="min-w-full min-h-50">
+            <Suspense fallback={null}>
+            <FlexCarousel 
+                preset="liquid"
+                intro="rise"
+                cardHeight={0.44}
+                gap={14}
+                squeeze={0.2}
+                focusOnClick
+                captions
+                fit="landscape"
+                radius={0}
+                lensWidth={2}
+                lensHeight={2}
+                tilt={19}
+                roundness={0}
+                bend={0.34}
+                reach={0.54}
+                curl="twist"
+                dispersion={0.71}
+                liquid={0}
+                followCursor={false}
+                captureWheel={false}>
+
+            </FlexCarousel>
+            </Suspense>
         </div>
     </section>
 )}

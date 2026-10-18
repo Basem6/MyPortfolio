@@ -1,3 +1,4 @@
+import beso from "./../assets/beso.jpeg"
 export default function About() {
   return (
     <section
@@ -49,7 +50,8 @@ export default function About() {
           </div>
         </div>
 
-        <div className="w-full md:w-300 md:h-150  rounded-lg">
+        <div className="w-full md:w-300 md:h-150 overflow-hidden transition-all duration-500  rounded-lg grayscale hover:grayscale-0">
+          <img src={beso} alt="Basem Mahmoud" className="rounded" />
         </div>
       </div>
     </section>
