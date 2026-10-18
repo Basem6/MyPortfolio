@@ -131,21 +131,3 @@ will-change: transform;
     transition: transform 0.3s ease-in-out 0.1s;
     transform: translate(0);
 }
-.swiper-button-prev,
-.swiper-button-next {
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(232, 232, 232, 0.509);
-  border-radius: 50%;
-  backdrop-filter: blur(1px);
-  color: rgb(236, 233, 233);
-}
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 10px;
-  font-weight: 700;
-}

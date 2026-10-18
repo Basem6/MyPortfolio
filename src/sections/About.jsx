@@ -1,4 +1,3 @@
-import Lanyard from "../components/Lanyard"
 export default function About() {
   return (
     <section
@@ -51,7 +50,6 @@ export default function About() {
         </div>
 
         <div className="w-full md:w-300 md:h-150  rounded-lg">
-          <Lanyard></Lanyard>
         </div>
       </div>
     </section>

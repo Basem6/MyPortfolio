@@ -1,13 +1,15 @@
+import { lazy, Suspense } from "react";
+const NoiseShader= lazy(
+    () => import("../components/NoiseShader")
+);
 import { gsap, useGSAP} from "../lib/gsap";
 import AccordionUsage from "../components/Acording";
 import ropot from "/src/assets/ropot.png"
 import { useRef } from "react";
-import NoiseShader from "../components/NoiseShader";
 export default function Answers() {
     const sectionanswer = useRef(null)
     const sectiontop = useRef(null)
     const animatepulse = useRef(null)
-    
     useGSAP(() => {
         const mm = gsap.matchMedia();
 
@@ -26,8 +28,6 @@ export default function Answers() {
                 },
             });
         });
-
-        // تحسين 2: الـ pulse animation منفصل - استخدام أقل موارد
         if (animatepulse.current) {
             gsap.to(animatepulse.current, {
                 opacity: 0.4,
@@ -80,7 +80,7 @@ export default function Answers() {
             </div>
 
             <div
-                className="lg:absolute min-h-screen flex items-center flex-col justify-center pt-38 -z-10 left-0 inset-0"
+                className="lg:absolute min-h-screen flex overflow-hidden bg-black items-center flex-col justify-center pt-38 -z-10 left-0 inset-0"
                 id="contact"
             >
                 <div className="relative max-w-7xl mx-auto px-8 lg:px-0 text-center">
@@ -141,10 +141,12 @@ export default function Answers() {
                 </div>
                 </div>
                 <div
-                    className="absolute inset-0 -z-9999"
+                    className="absolute min-w-full h-screen inset-0 -z-9999"
                     aria-hidden="true"
                 >
-                    <NoiseShader />
+                    <Suspense fallback={<div className="min-w-full h-screen  bg-black"></div>}>
+                        <NoiseShader />
+                    </Suspense>
                 </div>
             </div>
         </section>

@@ -1,18 +1,14 @@
+import ChromaGrid  from "../components/CircularGallery";
 
-import { lazy, Suspense } from "react";
-const Sweiper= lazy(
-    () => import("../components/Swiper")
-);
 export default function Works(){
 return(
     <section
         id="projects"
         aria-labelledby="projects-heading"
-        className="min-w-full px-8 lg:px-10 relative max-w-full overflow-hidden"
+        className="min-w-full gap-4  border-y min-h-full b px-8 lg:px-10 border-gray-400/20 py-5 flex flex-col   relative max-w-full overflow-hidden"
         >
-        <div className="min-w-full px-8 lg:px-10 flex gap-1.5 items-center text-3xl py-15">
+        <div className="flex gap-4 py-4 items-center  text-3xl">
             <h1 id="projects-heading">Recent Works</h1>
-
             <span>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,11 +27,8 @@ return(
             </svg>
             </span>
         </div>
-
-        <div className="border-t border-b- border-gray-400/20 py-22">
-            <Suspense fallback={null}>
-            <Sweiper />
-            </Suspense>
+        <div className="min-w-full min-h-100">
+            <ChromaGrid></ChromaGrid>
         </div>
     </section>
 )}
