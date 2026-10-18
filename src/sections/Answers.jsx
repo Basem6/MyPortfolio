@@ -44,11 +44,11 @@ export default function Answers() {
 
     return (
         <section
-            className="relative min-w-full min-h-screen"
+            className="relative min-w-full min-h-screen "
             ref={sectionanswer}
             >
             <div
-                className="px-8 lg:px-10 lg:absolute inset-0 bg-black flex flex-col shadow-md shadow-gray-200/5 lg:flex-row justify-between gap-8 w-full h-fit z-10"
+                className="px-8 lg:px-10 lg:absolute  inset-0 bg-black flex flex-col shadow-md shadow-gray-200/5 lg:flex-row justify-between gap-8 w-full h-fit z-10"
                 ref={sectiontop}
             >
                 <div>

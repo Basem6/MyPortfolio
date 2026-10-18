@@ -6,6 +6,7 @@ import volera from "/src/assets/volrea.png";
 import estatehun from "/src/assets/Screenshot 2026-07-15 091811.png";
 import freelancerproject from "/src/assets/Screenshot 2026-08-27 004509.png";
 import dashboard from "/src/assets/dashboard.png";
+import { scrollToSection } from "../utils/scrollToSection";
 
 export default function PhotoGrid() {
 const gsapRef = useRef(null);
@@ -82,33 +83,29 @@ duration: 0.15,
 fontSize: "1.5px",
 });
 };
+
 const scrollToAbout = (e) => {
     e.preventDefault();
 
     const smoother = smootherRef.current;
 
     if (smoother) {
-    smoother.scrollTo("#about", true, "bottom bottom");
+        scrollToSection("#about","bottom bottom")
+    // smoother.scrollTo("#about", true, "bottom bottom");
     return;
     }
-
-    document.getElementById("about")?.scrollIntoView({
-    behavior: "smooth",
-    });
+    scrollToSection("#about","bottom bottom")
 };
 
 return (
     <section
         ref={section}
         aria-labelledby="works-heading"
-        className="hidden lg:block min-w-full p-3 my-40 px-18 lg:px-30"
+        className="min-w-full p-3 my-16  px-4 sm:px-6 lg:my-40 lg:px-30"
         >
-        <h2 id="works-heading" className="sr-only">
-            Selected Projects
-        </h2>
 
         <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[150px] gap-2.5"
+            className="grid grid-cols-2 lg:grid-cols-4 md:scale-100 scale-95 auto-rows-[72px] sm:auto-rows-[90px] lg:auto-rows-[150px] gap-2.5"
         >
 
             <div
@@ -131,15 +128,15 @@ return (
                 className="w-full h-full will-change-transform object-cover card grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
 
-                <div className="flex gap-2 absolute bg-gray-400/30 border-gray-50/20 border justify-center items-center bottom-2 left-1/2 text-sm -translate-x-1/2 min-w-[95%] rounded-full">
-                <span>View Case Study</span>
-                <Button />
+                <div className="flex gap-2 md:max-h-max max-h-9 absolute whitespace-nowrap bg-gray-400/30 border-gray-50/20 border justify-center items-center bottom-2 left-1/2 text-sm -translate-x-1/2 min-w-[90%] rounded-full">
+                <span>View <span className="hidden md:inline-block">Case Study</span></span>
+                <Button hover={"gr"} />
                 </div>
             </a>
             </div>
 
 
-            <div className="overflow-hidden rounded-sm col-span-2 row-span-5 relative bottom-1/11">
+            <div className="overflow-hidden hidden md:block rounded-sm col-span-1 row-span-2 relative lg:col-span-2 lg:row-span-5 lg:bottom-1/11">
             <a
                 href="#about"
                 onClick={scrollToAbout}
@@ -155,7 +152,7 @@ return (
                 onMouseEnter={enterBigPhoto}
                 onMouseLeave={leave}
                 decoding="async"
-                className="w-full h-full will-change-transform object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
+                className="w-full h-full  will-change-transform object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
             </a>
             </div>
@@ -182,8 +179,8 @@ return (
                 className="w-full h-full will-change-transform card object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
 
-                <div className="flex gap-2 absolute bg-gray-400/30 border-gray-50/20 border justify-center items-center bottom-2 left-1/2 text-sm -translate-x-1/2 min-w-[95%] rounded-full">
-                <span>View Case Study</span>
+                <div className="flex gap-2 md:max-h-max max-h-9 absolute whitespace-nowrap bg-gray-400/30 border-gray-50/20 border justify-center items-center bottom-2 left-1/2 text-sm -translate-x-1/2 min-w-[90%] rounded-full">
+                <span>View <span className="hidden md:inline-block">Case Study</span></span>
                 <Button hover={"gr"} />
                 </div>
             </a>
@@ -209,9 +206,9 @@ return (
                 className="w-full h-full will-change-transform card object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
 
-                <div className="flex gap-2 absolute bg-gray-400/30 border-gray-50/20 border justify-center items-center bottom-2 left-1/2 text-sm -translate-x-1/2 min-w-[95%] rounded-full">
-                <span>View Case Study</span>
-                <Button />
+                <div className="flex gap-2 md:max-h-max max-h-9 absolute whitespace-nowrap bg-gray-400/30 border-gray-50/20 border justify-center items-center bottom-2 left-1/2 text-sm -translate-x-1/2 min-w-[90%] rounded-full">
+                <span>View <span className="hidden md:inline-block">Case Study</span></span>
+                <Button hover={"gr"} />
                 </div>
             </a>
             </div>
@@ -236,9 +233,9 @@ return (
                 className="w-full h-full will-change-transform card object-cover grayscale hover:grayscale-0 hover:scale-110 transition duration-500"
                 />
 
-                <div className="flex gap-2 card absolute bg-gray-400/30 border-gray-50/20 border justify-center items-center bottom-2 left-1/2 text-sm -translate-x-1/2 min-w-[95%] rounded-full">
-                <span>View Case Study</span>
-                <Button />
+                <div className="flex gap-2 md:max-h-max max-h-9 absolute whitespace-nowrap bg-gray-400/30 border-gray-50/20 border justify-center items-center bottom-2 left-1/2 text-sm -translate-x-1/2 min-w-[90%] rounded-full">
+                <span>View <span className="hidden md:inline-block">Case Study</span></span>
+                <Button hover={"gr"} />
                 </div>
             </a>
             </div>

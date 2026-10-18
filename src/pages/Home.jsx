@@ -4,7 +4,7 @@ const PhotoGrid = lazy(() => import("../sections/Photogrid"));
 const About = lazy(() => import("../sections/About"));
 const Answers = lazy(() => import("../sections/Answers"));
 import  Skills  from '../components/Skills'
-import  Works  from '../sections/Works';
+
 export default function Home() {
   return (
     <>
@@ -16,7 +16,7 @@ export default function Home() {
       <Suspense fallback={<div className="h-200" />}>
       <About />
       </Suspense>
-      <Works/>
+      
       <Suspense fallback={<div className="h-200" />}>
       <Answers/>
       </Suspense>

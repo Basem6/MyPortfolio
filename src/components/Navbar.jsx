@@ -1,33 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
-import {ScrollSmoother} from '../lib/gsap'
+import { scrollToSection } from '../utils/scrollToSection'
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ]
-
-function  scrollToSection(href , pos) {
-  const smoother = ScrollSmoother.get()
-  if (smoother) {
-    if(href!="#contact"){
-    smoother.scrollTo(href,true ,pos)
-    }else{
-      const maxScroll =
-      document.documentElement.scrollHeight - window.innerHeight;
-      smoother.scrollTo(maxScroll, true);
-    }
-  } else {
-    if(href!="#contact"){
-    document.getElementById(href.replace('#', ''))?.scrollIntoView({ behavior: 'smooth', })
-    }else{
-      window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
-    }
-  }
-}
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
