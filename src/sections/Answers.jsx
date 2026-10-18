@@ -48,7 +48,7 @@ export default function Answers() {
             ref={sectionanswer}
             >
             <div
-                className="px-8 lg:px-10 lg:absolute  inset-0 bg-black flex flex-col shadow-md shadow-gray-200/5 lg:flex-row justify-between gap-8 w-full h-fit z-10"
+                className="px-8 lg:px-10 lg:absolute z-10 inset-0 bg-black flex flex-col shadow-md shadow-gray-200/5 lg:flex-row justify-between gap-8 w-full h-fit "
                 ref={sectiontop}
             >
                 <div>
@@ -80,7 +80,7 @@ export default function Answers() {
             </div>
 
             <div
-                className="relative md:absolute min-h-screen flex overflow-hidden bg-black items-center flex-col justify-center pt-38 -z-10 left-0 inset-0"
+                className="relative md:absolute min-h-screen flex overflow-hidden bg-black items-center flex-col justify-center pt-38 z-10  md:-z-10 left-0 inset-0"
                 id="contact"
             >
                 <div className="relative max-w-7xl mx-auto px-8 lg:px-0 text-center">
@@ -141,7 +141,7 @@ export default function Answers() {
                 </div>
                 </div>
                 <div
-                    className="absolute min-w-full h-screen inset-0 -z-9999"
+                    className="absolute min-w-full h-screen inset-0 -z-999"
                     aria-hidden="true"
                 >
                     <Suspense fallback={<div className="min-w-full h-screen  bg-black"></div>}>
