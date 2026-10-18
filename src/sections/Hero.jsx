@@ -2,9 +2,9 @@ import { useRef } from "react";
 import { gsap, SplitText , useGSAP} from "../lib/gsap";
 
 import NoiseShader from "../components/NoiseShader"
+import { scrollToSection } from "../utils/scrollToSection";
 
 export default function Hero() {
-  const smootherRef = useRef(null);
   const sectionRef = useRef(null);
   const badgeRef = useRef(null);
   const headingRef = useRef(null);
@@ -112,21 +112,7 @@ export default function Hero() {
       ctx.revert();
     };
   }, {dependencies:[],scope:sectionRef});
-
-  const scrollToProjects = (e) => {
-    e.preventDefault();
-
-    const smoother = smootherRef.current;
-
-    if (smoother) {
-      smoother.scrollTo("#projects", true, "bottom bottom");
-      return;
-    }
-
-    document.getElementById("projects")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  
 
   return (
     <section
@@ -178,8 +164,12 @@ export default function Hero() {
           className="mt-6 relative md:top-0 top-20  flex flex-col sm:flex-row items-center justify-center gap-3"
         >
           <a
-            href="#projects"
-            onClick={scrollToProjects}
+                    
+          onClick={() => {
+            const isMobile = window.matchMedia("(max-width: 767px)").matches;
+            scrollToSection("#photoGrid", `${isMobile ? "bottom bottom" : "center bottom"}`);
+          }}
+
             className="group px-6 py-2 bg-black text-white transition-all duration-300 btn"
           >
             See Projects

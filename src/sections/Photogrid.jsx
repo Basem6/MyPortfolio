@@ -100,6 +100,7 @@ const scrollToAbout = (e) => {
 return (
     <section
         ref={section}
+        id="photoGrid"
         aria-labelledby="works-heading"
         className="min-w-full p-3 my-16  px-4 sm:px-6 lg:my-40 lg:px-30"
         >
