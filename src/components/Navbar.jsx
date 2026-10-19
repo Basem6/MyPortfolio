@@ -3,7 +3,7 @@ import { scrollToSection } from '../utils/scrollToSection'
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
+  { name: 'Projects', href: '#photoGrid' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -65,7 +65,12 @@ useEffect(() => {
   // FIX: prevent default anchor jump, then delegate to ScrollSmoother
   const handleNavClick = (e, href) => {
     e.preventDefault()
-    scrollToSection(href , "bottom bottom")
+    if(href==="#photoGrid"){
+      scrollToSection(href , "60% bottom")
+    }else{
+      scrollToSection(href , "bottom bottom")
+    }
+    
   }
 
   // FIX: close mobile menu AND scroll on the same click

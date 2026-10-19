@@ -16,7 +16,6 @@ export default function Home() {
       <Suspense fallback={<div className="h-200" />}>
       <About />
       </Suspense>
-      
       <Suspense fallback={<div className="h-200" />}>
       <Answers/>
       </Suspense>
